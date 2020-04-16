@@ -11,7 +11,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.contentsCss = './css/ckeditor-media-stickies-contents.css';
 
 	config.toolbar = [
-		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'FontSize', 'TextColor', 'BGColor', 'Image', 'Link', 'EmojiPanel' ] }
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'FontSize', 'TextColor', 'BGColor', 'EmojiPanel' ] }
 	];
 
 	config.plugins =
@@ -41,7 +41,8 @@ CKEDITOR.editorConfig = function( config ) {
 		'forms,' +
 		'horizontalrule,' +
 		'htmlwriter,' +
-		'image,' +
+//		'image,' +
+		'image2,' +
 		'iframe,' +
 		'indentlist,' +
 		'indentblock,' +
