@@ -4,13 +4,20 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
-	// %REMOVE_START%
+	config.enterMode = 2;
+	config.shiftEnterMode = 1;
+	config.allowedContent = true;
+	
+	config.contentsCss = './css/ckeditor-media-stickies-contents.css';
+
+	config.toolbar = [
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'FontSize', 'TextColor', 'BGColor', 'Image', 'Link', 'EmojiPanel' ] }
+	];
+
 	config.plugins =
-		'about,' +
-		'a11yhelp,' +
+//		'about,' +
+//		'a11yhelp,' +
+		'autolink,' +
 		'basicstyles,' +
 		'bidi,' +
 		'blockquote,' +
@@ -18,18 +25,19 @@ CKEDITOR.editorConfig = function( config ) {
 		'colorbutton,' +
 		'colordialog,' +
 		'copyformatting,' +
-		'contextmenu,' +
+//		'contextmenu,' +
 		'dialogadvtab,' +
 		'div,' +
-		'elementspath,' +
+//		'elementspath,' +
 		'enterkey,' +
 		'entities,' +
-		'filebrowser,' +
+		'emoji,' + 
+//		'filebrowser,' +
 		'find,' +
-		'flash,' +
+//		'flash,' +
 		'floatingspace,' +
 		'font,' +
-		'format,' +
+//		'format,' +
 		'forms,' +
 		'horizontalrule,' +
 		'htmlwriter,' +
@@ -43,35 +51,37 @@ CKEDITOR.editorConfig = function( config ) {
 		'list,' +
 		'liststyle,' +
 		'magicline,' +
-		'maximize,' +
-		'newpage,' +
-		'pagebreak,' +
+//		'maximize,' +
+//		'newpage,' +
+//		'pagebreak,' +
 		'pastefromgdocs,' +
 		'pastefromlibreoffice,' +
 		'pastefromword,' +
 		'pastetext,' +
-		'preview,' +
-		'print,' +
-		'removeformat,' +
-		'resize,' +
-		'save,' +
-		'selectall,' +
-		'showblocks,' +
+//		'preview,' +
+//		'print,' +
+//		'removeformat,' +
+//		'resize,' +
+//		'save,' +
+//		'selectall,' +
+//		'showblocks,' +
 		'showborders,' +
-		'smiley,' +
+//		'smiley,' +
 		'sourcearea,' +
 		'specialchar,' +
-		'stylescombo,' +
+//		'stylescombo,' +
 		'tab,' +
 		'table,' +
 		'tableselection,' +
 		'tabletools,' +
-		'templates,' +
+//		'templates,' +
 		'toolbar,' +
 		'undo,' +
-		'uploadimage,' +
+//		'uploadimage,' +
 		'wysiwygarea';
-	// %REMOVE_END%
+
+	config.toolbarLocation = 'bottom';
+	config.fontSize_defaultLabel = '16';
 };
 
 // %LEAVE_UNMINIFIED% %REMOVE_LINE%
