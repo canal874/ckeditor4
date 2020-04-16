@@ -12,7 +12,7 @@
 		requires: 'clipboard,textmatch',
 
 		init: function( editor ) {
-			var urlTemplate = new CKEDITOR.template( '<a href="{link}">{text}</a>' ),
+			var urlTemplate = new CKEDITOR.template( '<a href="{link}" target="_blank">{text}</a>' ),
 				emailTemplate = new CKEDITOR.template( '<a href="mailto:{link}">{text}</a>' );
 
 			editor.on( 'paste', function( evt ) {
