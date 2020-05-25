@@ -11,12 +11,13 @@ CKEDITOR.editorConfig = function( config ) {
 	config.contentsCss = './css/ckeditor-media-stickies-contents.css';
 
 	config.toolbar = [
-		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'FontSize', 'TextColor', 'BGColor', 'EmojiPanel' ] }
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'FontSize', 'TextColor', 'BGColor' ] }
 	];
 
 	config.plugins =
 //		'about,' +
 //		'a11yhelp,' +
+//    'autoembed,' + 
 		'autolink,' +
 		'basicstyles,' +
 		'bidi,' +
@@ -29,6 +30,8 @@ CKEDITOR.editorConfig = function( config ) {
 		'dialogadvtab,' +
 		'div,' +
 //		'elementspath,' +
+//    'embed,' +
+//    'embedbase,' +  
 		'enterkey,' +
 		'entities,' +
 		'emoji,' + 
@@ -43,7 +46,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'htmlwriter,' +
 //		'image,' +
 		'image2,' +
-		'iframe,' +
+//		'iframe,' +
 		'indentlist,' +
 		'indentblock,' +
 		'justify,' +
