@@ -52,7 +52,7 @@ var CKBUILDER_CONFIG = {
 //		elementspath: 1,
 //    embed: 1,
 //    embedbase: 1,
-		emoji: 1,
+//		emoji: 1,
 		enterkey: 1,
 		entities: 1,
 //		filebrowser: 1,
