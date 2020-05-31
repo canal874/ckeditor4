@@ -511,6 +511,7 @@
 	 * @singleton
 	 */
 	CKEDITOR.plugins.image2 = {
+    adjustEditorSize: function(w,h){/* this method must be implemented by using ICardEditor of Media Stickies */},
 		stateShifter: function( editor ) {
 			// Tag name used for centering non-captioned widgets.
 			var doc = editor.document,
@@ -1323,7 +1324,8 @@
 				}
 
 				if ( isAllowedSize( newWidth, newHeight ) ) {
-					updateData = { width: newWidth, height: newHeight };
+          updateData = { width: newWidth, height: newHeight };
+          CKEDITOR.plugins.image2.adjustEditorSize(newWidth, newHeight);
 					image.setAttributes( updateData );
 				}
 			}
