@@ -104,6 +104,13 @@
 
 				if ( element && !element.isReadOnly() ) {
 					if ( element.is( 'a' ) ) {
+            if (element.$.href && (element.$.protocol.indexOf('http') == 0)) {
+              // Open hyperlink by doubleclick, and prevent from opening plugin dialog
+              window.open(element.$.href, '_blank');
+              e.data.preventDefault();
+              return;
+            }
+
 						evt.data.dialog = ( element.getAttribute( 'name' ) && ( !element.getAttribute( 'href' ) || !element.getChildCount() ) ) ? 'anchor' : 'link';
 
 						// Pass the link to be selected along with event data.
