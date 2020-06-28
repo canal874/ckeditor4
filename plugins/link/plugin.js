@@ -197,6 +197,12 @@
 			editor.dataProcessor.dataFilter.addRules( {
 				elements: {
 					a: function( element ) {
+            // Force to add target to '_blank' if not href indicates an anchor point.
+            if(element.attributes['href'] && !element.attributes['href'].match(/^#/)){
+              element.attributes['target'] = "_blank";
+            }
+            
+
 						if ( !element.attributes.name ) {
 							return null;
 						}
@@ -697,7 +703,10 @@
 					break;
 			}
 
-			// Popups and target.
+      // Popups and target.
+			// Force to set target to '_blank'
+      set.target = '_blank';
+      /*
 			if ( data.target ) {
 				if ( data.target.type == 'popup' ) {
 					var onclickList = [
@@ -729,7 +738,8 @@
 					set.target = data.target.name;
 				}
 			}
-
+      */
+     
 			// Force download attribute.
 			if ( data.download ) {
 				set.download = '';
