@@ -704,8 +704,10 @@
 			}
 
       // Popups and target.
-			// Force to set target to '_blank'
-      set.target = '_blank';
+      // Force to set target to '_blank'
+      if(data.type != 'anchor' && data.url && data.url.protocol !== undefined){
+        set.target = '_blank';
+      }
       /*
 			if ( data.target ) {
 				if ( data.target.type == 'popup' ) {
