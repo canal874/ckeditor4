@@ -900,8 +900,7 @@
 			// Script tags will also be forced to be protected, otherwise
 			// IE will execute them.
       
-      // Commented it out to enable <script> tag
-      // ( /<script[\s\S]*?(<\/script>|$)/gi ),
+      ( /<script[\s\S]*?(<\/script>|$)/gi ),
 
 			// <noscript> tags (get lost in IE and messed up in FF).
 			/<noscript[\s\S]*?<\/noscript>/gi,
