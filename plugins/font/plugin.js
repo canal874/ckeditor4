@@ -229,7 +229,10 @@
 					}
 
 					// If no styles match, just empty it.
-					this.setValue( '', definition.defaultLabel );
+//					this.setValue( '', definition.defaultLabel );
+					// Set default font size
+          // this.setValue( '16' );
+          this.setValue( definition.defaultLabel );
 				}, this );
 
 				command.on( 'state', function() {

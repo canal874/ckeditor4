@@ -4,74 +4,92 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
-	// %REMOVE_START%
+	config.enterMode = 2;
+	config.shiftEnterMode = 1;
+	config.allowedContent = true;
+	
+	config.contentsCss = './css/ckeditor-rxdesktop-contents.css?20200609';
+
+  config.colorButton_colors = 'FFD700,DC143C,008000,0000CD,FF8C00,800080,FFF8D0,FFCAC4,EDFFC4,D1E1FF,FFDD9E,F8D0FF,BFBA9D,BF9893,B2BF93,9DA9BF,BFA677,BA9DBF,E0E0E0,C0C0C0,A0A0A0,505050,000000,ffffff';
+
+  config.colorButton_enableMore = false;
+  
+	config.toolbar = [
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'BulletedList', 'FontSize', 'TextColor', 'BGColor' ] }
+	];
+
 	config.plugins =
-		'about,' +
-		'a11yhelp,' +
+//		'about,' +
+//		'a11yhelp,' +
+//    'autoembed,' + 
+		'autolink,' +
 		'basicstyles,' +
 		'bidi,' +
 		'blockquote,' +
-		'clipboard,' +
+//		'clipboard,' +
 		'colorbutton,' +
 		'colordialog,' +
-		'copyformatting,' +
-		'contextmenu,' +
+//		'copyformatting,' +
+//		'contextmenu,' +
 		'dialogadvtab,' +
 		'div,' +
-		'elementspath,' +
+//		'elementspath,' +
+//    'embed,' +
+//    'embedbase,' +  
 		'enterkey,' +
 		'entities,' +
-		'filebrowser,' +
+//		'emoji,' + 
+//		'filebrowser,' +
 		'find,' +
-		'flash,' +
+//		'flash,' +
 		'floatingspace,' +
 		'font,' +
-		'format,' +
-		'forms,' +
+//		'format,' +
+//		'forms,' +
 		'horizontalrule,' +
 		'htmlwriter,' +
-		'image,' +
-		'iframe,' +
+//		'image,' +
+		'image2,' +
+//		'iframe,' +
 		'indentlist,' +
 		'indentblock,' +
 		'justify,' +
 		'language,' +
 		'link,' +
 		'list,' +
-		'liststyle,' +
+//		'liststyle,' +  // NOTE: If uncomment this line, context menu of CKEditor is shown by right clicking.
 		'magicline,' +
-		'maximize,' +
-		'newpage,' +
-		'pagebreak,' +
-		'pastefromgdocs,' +
-		'pastefromlibreoffice,' +
-		'pastefromword,' +
-		'pastetext,' +
-		'preview,' +
-		'print,' +
-		'removeformat,' +
-		'resize,' +
-		'save,' +
-		'selectall,' +
-		'showblocks,' +
+//		'maximize,' +
+//		'newpage,' +
+//		'pagebreak,' +
+//		'pastefromgdocs,' +
+//		'pastefromlibreoffice,' +
+//		'pastefromword,' +
+//		'pastetext,' +
+//		'preview,' +
+//		'print,' +
+//		'removeformat,' +
+//		'resize,' +
+//		'save,' +
+//		'selectall,' +
+//		'showblocks,' +
 		'showborders,' +
-		'smiley,' +
+//		'smiley,' +
 		'sourcearea,' +
 		'specialchar,' +
-		'stylescombo,' +
+//		'stylescombo,' +
 		'tab,' +
 		'table,' +
-		'tableselection,' +
-		'tabletools,' +
-		'templates,' +
+//		'tableselection,' +
+//		'tabletools,' +
+//		'templates,' +
 		'toolbar,' +
 		'undo,' +
-		'uploadimage,' +
+//		'uploadimage,' +
 		'wysiwygarea';
-	// %REMOVE_END%
+
+	config.toolbarLocation = 'bottom';
+	config.fontSize_defaultLabel = '14';
 };
 
 // %LEAVE_UNMINIFIED% %REMOVE_LINE%
